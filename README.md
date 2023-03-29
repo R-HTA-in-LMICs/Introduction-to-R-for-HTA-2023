@@ -3,7 +3,7 @@
 <img src="figs/logo.png" width="260" align="right" />
 <br/>
 
-This repository stores the code, presentations, and material used in the R-HTA in LMICs introductory 2023 tutorial. The following sections provide a breakdown of the primary documents and guidance on how to use them for your own personal training. The tutorial is based on several open-source frameworks for modelling Cost-Effectiveness Analysis models and Shiny apps in R for HTA (see the [citations](https://github.com/R-HTA-in-LMICs/Advanced-Tutorial-2022#citations) section), developed by the [DARTH](https://darthworkgroup.com) group.
+This repository stores the code, presentations, and material used in the R-HTA in LMICs introductory 2023 tutorial. The following sections provide a breakdown of the primary documents and guidance on how to use them for your own personal training. The tutorial is based on several open-source frameworks for Cost-Effectiveness Analysis modelling in R, developed by the [DARTH](https://darthworkgroup.com) group, for HTA (see the [citations](https://github.com/R-HTA-in-LMICs/Advanced-Tutorial-2022#citations) section).
 
 ## Navigation
 
