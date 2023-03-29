@@ -3,7 +3,7 @@
 <img src="figs/logo.png" width="260" align="right" />
 <br/>
 
-This repository stores the code, presentations, and material used in the R-HTA in LMICs introductory 2023 tutorial. The following sections provide a breakdown of the primary documents and guidance on how to use them for your own personal training. The tutorial is based on several open-source frameworks for Cost-Effectiveness Analysis modelling in R, developed by the [DARTH](https://darthworkgroup.com) group, for HTA (see the [citations](https://github.com/R-HTA-in-LMICs/Advanced-Tutorial-2022#citations) section).
+This repository stores the code, presentations, and material used in the R-HTA in LMICs introductory 2023 tutorial. The following sections provide a breakdown of the primary documents and guidance on how to use them for your own personal training. The tutorial is based on several open-source frameworks for Cost-Effectiveness Analysis modelling in R, developed by the [DARTH](https://darthworkgroup.com) group, for HTA (see the [citations](https://github.com/R-HTA-in-LMICs/Introduction-to-R-for-HTA-2023#citations) section).
 
 ## Navigation
 
@@ -32,7 +32,7 @@ install.packages("devtools")
 devtools::install_github("DARTH-git/darthtools")
 ```
 
-For syntax consistency, we follow the coding syntax framework developed by the DARTH group:
+For syntax consistency, we follow the R syntax framework developed by the DARTH group:
 -   Alarid-Escudero F, Krijkamp EM, Pechlivanoglou P, Jalal HJ, Kao SYZ, Yang A, Enns EA. [A Need for Change! A Coding Framework for Improving Transparency in Decision Modeling](https://link.springer.com/article/10.1007/s40273-019-00837-x). [PharmacoEconomics](https://www.springer.com/journal/40273), 2190;37(11):1329--1339. <https://doi.org/10.1007/s40273-019-00837-x>
 
 ## Citations
