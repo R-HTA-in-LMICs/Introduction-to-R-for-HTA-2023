@@ -32,16 +32,16 @@ install.packages("devtools")
 devtools::install_github("DARTH-git/darthtools")
 ```
 
+## Citations
+
 For syntax consistency, we follow the R syntax framework developed by the DARTH group:
 -   Alarid-Escudero F, Krijkamp EM, Pechlivanoglou P, Jalal HJ, Kao SYZ, Yang A, Enns EA. [A Need for Change! A Coding Framework for Improving Transparency in Decision Modeling](https://link.springer.com/article/10.1007/s40273-019-00837-x). [PharmacoEconomics](https://www.springer.com/journal/40273), 2190;37(11):1329--1339. <https://doi.org/10.1007/s40273-019-00837-x>
 
-## Citations
-
-This tutorial is based on several open-source R coding frameworks for HTA:
+This tutorial is also based on several open-source R coding templates for HTA:
 
 > Alarid-Escudero F, Krijkamp EM, Enns EA, Yang A, Hunink MGM, Pechlivanoglou P, Jalal H. A Tutorial on Time-Dependent Cohort State-Transition Models in R using a Cost-Effectiveness Analysis Example (<https://arxiv.org/abs/2108.13552>). arXiv:2108.13552v2. 2022:1-37.
 
-> Alarid-Escudero F, Krijkamp EM, Enns EA, Yang A, Hunink MGM, Pechlivanoglou P, Jalal H (2022). R Code for A Tutorial on Time-Dependent Cohort State-Transition Models in R using a Cost-Effectiveness Analysis Example (Version v0.2.0). Zenodo. [10.5281/zenodo.6620902](https://www.doi.org/10.5281/zenodo.6620902). Last accessed 7 June 2022.
+> Alarid-Escudero F, Krijkamp EM, Pechlivanoglou P, Jalal H, Kao SZ, Yang A, Enns EA. A Need for Change! A Coding Framework for Improving Transparency in Decision Modeling. Pharmacoeconomics. 2019 Nov;37(11):1329-1339. doi: 10.1007/s40273-019-00837-x. PMID: 31549359; PMCID: PMC6871515 [10.5281/zenodo.6620902](https://www.doi.org/10.5281/zenodo.6620902). Last accessed 7 June 2022.
 
 # Additional Information
 
