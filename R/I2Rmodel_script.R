@@ -93,18 +93,21 @@ a_P_NT <- a_P_SoC
 a_P_NT["A", "B", 1:2] <- p_AB * n_rr_trteffect # transition from health state from A to B
 a_P_NT["A", "C", 1:2] <- p_AC * n_rr_trteffect # transition from health state from A to C
 a_P_NT["A", "Death", 1:2] <- p_AD * n_rr_trteffect # transition from health state from A to Death
-a_P_NT["A", "A", 1:2] <- (1 - p_AB * n_rr_trteffect) * (1 - p_AC * n_rr_trteffect) * (1 - p_AD * n_rr_trteffect) # transition from health state from A to A, using chain rule
+a_P_NT["A", "A", 1:2] <- 1 - ((p_AB * n_rr_trteffect) + (p_AC * n_rr_trteffect) + (p_AD * n_rr_trteffect)) # transition from health state from A to A, using chain rule
 # i.e., A to A is conditional on the joint distribution of not moving to other, 
 # worse states and etc. for B to B and C to C transitions
 
 # Transitions from State B in first two years
 a_P_NT["B", "C", 1:2] <- p_BC * n_rr_trteffect # transition from health state from B to C
 a_P_NT["B", "Death", 1:2] <- p_BD * n_rr_trteffect # transition from health state from B to Death
-a_P_NT["B", "B", 1:2] <- (1 - p_BC * n_rr_trteffect) * (1 - p_BD * n_rr_trteffect) # transition from health state from B to B, using chain rule
+a_P_NT["B", "B", 1:2] <- ((p_BC * n_rr_trteffect) + (p_BD * n_rr_trteffect)) # transition from health state from B to B, using chain rule
 
 # Transitions from State C in first two years
 a_P_NT["C", "Death", 1:2] <- p_CD * n_rr_trteffect # transition from health state from C to Death
 a_P_NT["C", "C", 1:2] <- 1 - p_CD * n_rr_trteffect # transition from health state from C to C
+
+# Check transitions
+apply(a_P_NT["A", , ], 2, sum)
 
 # Markov model -------------------------------------------------------------
 # Create initial state vector for all health states at t = 0
