@@ -81,6 +81,9 @@ a_P_SoC["C", "Death", ] <- p_CD # transition from health state C to Death
 # Transitions from health state Death
 a_P_SoC["Death", "Death", ] <- p_DD # transition from health state Death to Death
 
+# Check transitions
+apply(a_P_SoC[, , ], 1, sum) / n_cycles
+
 #### Transitions for New Treatment -------------------------------------------
 # Note: for this comparator, all transitions in the first two years are dependent on
 # the relative risk of moving to another state, i.e., conditional on being on New 
@@ -100,14 +103,14 @@ a_P_NT["A", "A", 1:2] <- 1 - ((p_AB * n_rr_trteffect) + (p_AC * n_rr_trteffect) 
 # Transitions from State B in first two years
 a_P_NT["B", "C", 1:2] <- p_BC * n_rr_trteffect # transition from health state from B to C
 a_P_NT["B", "Death", 1:2] <- p_BD * n_rr_trteffect # transition from health state from B to Death
-a_P_NT["B", "B", 1:2] <- ((p_BC * n_rr_trteffect) + (p_BD * n_rr_trteffect)) # transition from health state from B to B, using chain rule
+a_P_NT["B", "B", 1:2] <- 1 - ((p_BC * n_rr_trteffect) + (p_BD * n_rr_trteffect)) # transition from health state from B to B, using chain rule
 
 # Transitions from State C in first two years
 a_P_NT["C", "Death", 1:2] <- p_CD * n_rr_trteffect # transition from health state from C to Death
 a_P_NT["C", "C", 1:2] <- 1 - p_CD * n_rr_trteffect # transition from health state from C to C
 
 # Check transitions
-apply(a_P_NT["A", , ], 2, sum)
+apply(a_P_NT[, , ], 1, sum) / n_cycles
 
 # Markov model -------------------------------------------------------------
 # Create initial state vector for all health states at t = 0
