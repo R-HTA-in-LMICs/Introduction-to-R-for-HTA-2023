@@ -5,9 +5,11 @@ x <- 2
 # Vectors -----------------------------------------------------------------
 # we can see the length of x using the following 'base' r function:
 length(x)
+
 # to expand on the above, we assign *several* ordered values to a single object 
 # using the *concatenate* function:
 x <- c(5, 3, 1, 5.2, 2.45, 10.4, 9, 2.2)
+
 # and by calling the object we can see what values are associated with that 
 # object:
 print(x)
@@ -15,7 +17,7 @@ print(x)
 x
 
 # the problem of coercion:
-temp <- c(1, 2, "4", 5, "3 31")
+temp <- c(1, 2, "Josh", 5, "3 31")
 temp * 2
 str(temp)
 
@@ -42,7 +44,7 @@ list_example
 
 # Manipulation:
 1/x
-1/x[1/x <= 1]
+1/x[1/x <= 0.2]
 # the third value of x:
 x[3]
 # the third, fourth, and fifth value of x:
@@ -84,7 +86,7 @@ x_matrix <- matrix(data = x, nrow = length(x), ncol = length(z))
 x_matrix * z
 
 # create matrix
-matrix_temp <- matrix(data = rnorm(n = 10*5, mean = 0, sd = 1),
+matrix_temp <- matrix(data = rnorm(n = 10 * 5, mean = 0, sd = 1),
                       nrow = 10, ncol = 5)
 # print results
 matrix_temp
