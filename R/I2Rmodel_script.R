@@ -1,5 +1,5 @@
 # Misc settings -----------------------------------------------------------
-pkgs <- c("BCEA", "dampack", "reshape2", "tidyverse", "darthtools")
+pkgs <- c("dampack", "reshape2", "tidyverse", "darthtools")
 
 # Install packages if not installed
 installed_packages <- pkgs %in% rownames(installed.packages())
@@ -9,6 +9,8 @@ if (any(installed_packages == FALSE)) {
 
 # Load required packages
 invisible(lapply(pkgs, library, character.only = TRUE))
+
+
 
 # Model Settings ----------------------------------------------------------
 # The following Markov model, coded in R, adapts the HIV/AIDS model found in 
@@ -82,7 +84,7 @@ a_P_SoC["C", "Death", ] <- p_CD # transition from health state C to Death
 a_P_SoC["Death", "Death", ] <- p_DD # transition from health state Death to Death
 
 # Check transitions
-apply(a_P_SoC[, , ], 1, sum) / n_cycles
+apply(a_P_SoC, MARGIN = 1, sum) / n_cycles
 
 #### Transitions for New Treatment -------------------------------------------
 # Note: for this comparator, all transitions in the first two years are dependent on
@@ -99,6 +101,8 @@ a_P_NT["A", "Death", 1:2] <- p_AD * n_rr_trteffect # transition from health stat
 a_P_NT["A", "A", 1:2] <- 1 - ((p_AB * n_rr_trteffect) + (p_AC * n_rr_trteffect) + (p_AD * n_rr_trteffect)) # transition from health state from A to A, using chain rule
 # i.e., A to A is conditional on the joint distribution of not moving to other, 
 # worse states and etc. for B to B and C to C transitions
+
+a_P_NT[, , 1]
 
 # Transitions from State B in first two years
 a_P_NT["B", "C", 1:2] <- p_BC * n_rr_trteffect # transition from health state from B to C
