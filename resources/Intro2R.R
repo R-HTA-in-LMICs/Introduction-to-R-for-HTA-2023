@@ -17,6 +17,7 @@ x
 # the problem of coercion:
 temp <- c(1, 2, "4", 5, "3 31")
 temp * 2
+str(temp)
 
 # Coercion ----------------------------------------------------------------
 # R also allows manipulation of logical quantities:
@@ -92,7 +93,7 @@ vector_eg <- runif(n = 5, min = 0, max = 1)
 # create object to store output
 output_temp <- matrix(data = NA, nrow = 10, ncol = 5)
 # iterate for-loop over nrows by ncols
-for (i in 1:nrow((matrix_temp))) {
+for (i in 1:nrow(matrix_temp)) {
  output_temp[i, ] <- matrix_temp[i, ] %*% vector_eg
 }
 
